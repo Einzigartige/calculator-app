@@ -4,6 +4,7 @@ A **progressive web app (PWA)** calculator that works online and offline, provid
 Built with **HTML, CSS, and JavaScript**, it includes **basic & advanced operations**, **theme support**, and a **mobile-first design**.
 
 > ⚠️ This project is primarily a **frontend demonstration** and does not store user data.
+<img width="1366" height="920" alt="Smart-Calculator-PWA-Online-Scientific-Standard-Calculator-Einzigartige-01-03-2026_05_11_PM" src="https://github.com/user-attachments/assets/3947b180-96fe-4fba-a0e2-3b4a84204631" />
 
 ---
 
