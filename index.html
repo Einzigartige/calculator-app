@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Primary SEO Meta Tags -->
-  <title>Smart Calculator PWA | Online Scientific & Standard Calculator - Einzigartige</title>
-  <meta name="description" content="Smart Calculator PWA by Einzigartige is a free online calculator with standard and scientific modes. Track history, toggle themes, and perform advanced math anytime, anywhere." />
-  <meta name="keywords" content="Smart Calculator, Online Calculator, PWA Calculator, Scientific Calculator, Standard Calculator, Math App, Calculator Online, Calculator with History, Einzigartige" />
-  <meta name="author" content="Einzigartige" />
+    <!-- Primary SEO Meta Tags -->
+    <title>Smart Calculator PWA | Online Scientific & Standard Calculator - Einzigartige</title>
+    <meta name="description"
+        content="Smart Calculator PWA by Einzigartige is a free online calculator with standard and scientific modes. Track history, toggle themes, and perform advanced math anytime, anywhere." />
+    <meta name="keywords"
+        content="Smart Calculator, Online Calculator, PWA Calculator, Scientific Calculator, Standard Calculator, Math App, Calculator Online, Calculator with History, Einzigartige" />
+    <meta name="author" content="Einzigartige" />
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Smart Calculator PWA | Online Calculator - Einzigartige" />
-  <meta property="og:description" content="Use the Smart Calculator PWA for scientific and standard calculations with history, themes, and more. Developed by Einzigartige." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://calculator.einzigartige.in/" />
-  <meta property="og:image" content="http://calculator.einzigartige.in/assets/og-image.png" />
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Smart Calculator PWA | Online Calculator - Einzigartige" />
+    <meta property="og:description"
+        content="Use the Smart Calculator PWA for scientific and standard calculations with history, themes, and more. Developed by Einzigartige." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://calculator.einzigartige.in/" />
+    <meta property="og:image" content="http://calculator.einzigartige.in/assets/og-image.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Smart Calculator PWA | Einzigartige" />
-  <meta name="twitter:description" content="Smart Calculator PWA is a fast, reliable online calculator with standard and scientific modes, developed by Einzigartige." />
-  <meta name="twitter:image" content="http://calculator.einzigartige.in/assets/og-image.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Smart Calculator PWA | Einzigartige" />
+    <meta name="twitter:description"
+        content="Smart Calculator PWA is a fast, reliable online calculator with standard and scientific modes, developed by Einzigartige." />
+    <meta name="twitter:image" content="http://calculator.einzigartige.in/assets/og-image.png" />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="http://calculator.einzigartige.in/" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://calculator.einzigartige.in/" />
 
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.json" />
+    <!-- PWA manifest -->
+    <link rel="manifest" href="manifest.json" />
 
-  <!-- Theme color for browser UI -->
-  <meta name="theme-color" content="#11142a" id="meta-theme-color" />
+    <!-- Theme color for browser UI -->
+    <meta name="theme-color" content="#11142a" id="meta-theme-color" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Structured Data: SoftwareApplication -->
-  <script type="application/ld+json">
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -61,8 +66,8 @@
   }
   </script>
 
-  <!-- Structured Data: FAQPage -->
-  <script type="application/ld+json">
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -103,128 +108,136 @@
   }
   </script>
 </head>
+
 <body>
-  <header>
-    <h1>Smart Calculator PWA - Online Standard & Scientific Calculator</h1>
-    <p>Developed by <a href="http://einzigartige.in/" title="Einzigartige Official Website">Einzigartige</a>. Perform fast calculations with history tracking, themes, and advanced scientific functions directly in your browser. Available offline as a Progressive Web App (PWA).</p>
-  </header>
+    <header>
+        <h1>Smart Calculator PWA | Online Calculator</h1>
+    </header>
 
-  <main class="container">
-    <aside class="side-panel left">
-      <div class="panel-header">
-        <h2>Calculation History</h2>
-        <div class="panel-actions">
-          <button id="clearHistoryBtn" title="Clear history">Clear</button>
-        </div>
-      </div>
-      <div id="historyList" class="history-list">
-        <!-- History items injected here -->
-      </div>
-    </aside>
+    <main class="container">
+        <aside class="side-panel left">
+            <div class="panel-header">
+                <h4>Calculation History</h4>
+                <div class="panel-actions">
+                    <button id="clearHistoryBtn" title="Clear history">Clear</button>
+                </div>
+            </div>
+            <div id="historyList" class="history-list">
+                <!-- History items injected here -->
+            </div>
+        </aside>
 
-    <section class="calculator" aria-label="Calculator Section">
-      <header class="top-bar">
-        <div class="toggles">
-          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
-          <button id="modeToggle" class="icon-btn" aria-label="Toggle scientific mode">🧮</button>
-          <button id="openSettings" class="icon-btn" aria-label="Open settings">⚙️</button>
-        </div>
-        <div class="install-area">
-          <button id="installBtn" class="install-btn hidden">Install</button>
-        </div>
-      </header>
+        <section class="calculator" aria-label="Calculator Section">
+            <header class="top-bar">
+                <div class="toggles">
+                    <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+                    <button id="modeToggle" class="icon-btn" aria-label="Toggle scientific mode">🧮</button>
+                    <button id="openSettings" class="icon-btn" aria-label="Open settings">⚙️</button>
+                </div>
+                <div class="install-area">
+                    <button id="installBtn" class="install-btn hidden">Install</button>
+                </div>
+            </header>
 
-      <div class="display-wrap">
-        <input id="display" class="display" type="text" readonly aria-label="Calculator display" />
-      </div>
+            <div class="display-wrap">
+                <input id="display" class="display" type="text" readonly aria-label="Calculator display" />
+            </div>
 
-      <div id="sciPanel" class="scientific-panel hidden" aria-label="Scientific Functions">
-        <button class="btn sci" data-sci="sin(">sin</button>
-        <button class="btn sci" data-sci="cos(">cos</button>
-        <button class="btn sci" data-sci="tan(">tan</button>
-        <button class="btn sci" data-sci="sqrt(">√</button>
-        <button class="btn sci" data-sci="ln(">ln</button>
-        <button class="btn sci" data-sci="log10(">log</button>
-        <button class="btn sci" data-sci="^">xʸ</button>
-        <button class="btn sci" data-sci="PI">π</button>
-      </div>
+            <div id="sciPanel" class="scientific-panel hidden" aria-label="Scientific Functions">
+                <button class="btn sci" data-sci="sin(">sin</button>
+                <button class="btn sci" data-sci="cos(">cos</button>
+                <button class="btn sci" data-sci="tan(">tan</button>
+                <button class="btn sci" data-sci="sqrt(">√</button>
+                <button class="btn sci" data-sci="ln(">ln</button>
+                <button class="btn sci" data-sci="log10(">log</button>
+                <button class="btn sci" data-sci="^">xʸ</button>
+                <button class="btn sci" data-sci="PI">π</button>
+            </div>
 
-      <div class="buttons-grid" role="grid" aria-label="Calculator Buttons">
-        <button class="btn action" data-action="clear">C</button>
-        <button class="btn action" data-action="delete">⌫</button>
-        <button class="btn operator" data-value="%">%</button>
-        <button class="btn operator" data-value="/">÷</button>
+            <div class="buttons-grid" role="grid" aria-label="Calculator Buttons">
+                <button class="btn action" data-action="clear">C</button>
+                <button class="btn action" data-action="delete">⌫</button>
+                <button class="btn operator" data-value="%">%</button>
+                <button class="btn operator" data-value="/">÷</button>
 
-        <button class="btn" data-value="7">7</button>
-        <button class="btn" data-value="8">8</button>
-        <button class="btn" data-value="9">9</button>
-        <button class="btn operator" data-value="*">×</button>
+                <button class="btn" data-value="7">7</button>
+                <button class="btn" data-value="8">8</button>
+                <button class="btn" data-value="9">9</button>
+                <button class="btn operator" data-value="*">×</button>
 
-        <button class="btn" data-value="4">4</button>
-        <button class="btn" data-value="5">5</button>
-        <button class="btn" data-value="6">6</button>
-        <button class="btn operator" data-value="-">−</button>
+                <button class="btn" data-value="4">4</button>
+                <button class="btn" data-value="5">5</button>
+                <button class="btn" data-value="6">6</button>
+                <button class="btn operator" data-value="-">−</button>
 
-        <button class="btn" data-value="1">1</button>
-        <button class="btn" data-value="2">2</button>
-        <button class="btn" data-value="3">3</button>
-        <button class="btn operator" data-value="+">+</button>
+                <button class="btn" data-value="1">1</button>
+                <button class="btn" data-value="2">2</button>
+                <button class="btn" data-value="3">3</button>
+                <button class="btn operator" data-value="+">+</button>
 
-        <button class="btn zero" data-value="0">0</button>
-        <button class="btn" data-value=".">.</button>
-        <button class="btn equal" data-action="calculate">=</button>
-      </div>
-    </section>
+                <button class="btn zero" data-value="0">0</button>
+                <button class="btn" data-value=".">.</button>
+                <button class="btn equal" data-action="calculate">=</button>
+            </div>
+        </section>
 
-    <aside class="side-panel right hidden" id="settingsPanel" role="region" aria-label="Settings Panel">
-      <div class="panel-header">
-        <h2>Settings</h2>
-        <div class="panel-actions">
-          <button id="closeSettings" title="Close">✖</button>
-        </div>
-      </div>
+        <aside class="side-panel right hidden" id="settingsPanel" role="region" aria-label="Settings Panel">
+            <div class="panel-header">
+                <h2>Settings</h2>
+                <div class="panel-actions">
+                    <button id="closeSettings" title="Close">✖</button>
+                </div>
+            </div>
 
-      <div class="settings-content">
-        <label class="setting-row">
-          <span>Theme</span>
-          <select id="themeSelect">
-            <option value="auto">Auto</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-          </select>
-        </label>
+            <div class="settings-content">
+                <label class="setting-row">
+                    <span>Theme</span>
+                    <select id="themeSelect">
+                        <option value="auto">Auto</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </label>
 
-        <label class="setting-row">
-          <span>Sound</span>
-          <input type="checkbox" id="soundToggle" />
-        </label>
+                <label class="setting-row">
+                    <span>Sound</span>
+                    <input type="checkbox" id="soundToggle" />
+                </label>
 
-        <label class="setting-row">
-          <span>Scientific default</span>
-          <input type="checkbox" id="sciDefault" />
-        </label>
+                <label class="setting-row">
+                    <span>Scientific default</span>
+                    <input type="checkbox" id="sciDefault" />
+                </label>
 
-        <label class="setting-row">
-          <span>History size</span>
-          <input id="historySize" type="number" min="5" max="200" value="50" />
-        </label>
+                <label class="setting-row">
+                    <span>History size</span>
+                    <input id="historySize" type="number" min="5" max="200" value="50" />
+                </label>
 
-        <div class="setting-row">
-          <button id="exportHistory">Export History</button>
-          <button id="importHistory">Import History</button>
-          <input type="file" id="importFile" accept="application/json" class="hidden" />
-        </div>
-      </div>
-    </aside>
-  </main>
+                <div class="setting-row">
+                    <button id="exportHistory">Export History</button>
+                    <button id="importHistory">Import History</button>
+                    <input type="file" id="importFile" accept="application/json" class="hidden" />
+                </div>
+            </div>
+        </aside>
+    </main>
 
-  <!-- Audio Assets -->
-  <audio id="sfx-click" src="assets/sounds/click.mp3" preload="auto"></audio>
-  <audio id="sfx-delete" src="assets/sounds/delete.mp3" preload="auto"></audio>
-  <audio id="sfx-clear" src="assets/sounds/clear.mp3" preload="auto"></audio>
-  <audio id="sfx-equals" src="assets/sounds/equals.mp3" preload="auto"></audio>
+    <footer>
+        <p>
+            Smart Calculator by <a href="http://einzigartige.in/" target="_blank" rel="noopener noreferrer" title="Einzigartige Official Website">Einzigartige</a> – Web & App Development. Fast, reliable calculations with history, themes, and advanced scientific functions. Available offline as a PWA.
+        </p>
+    </footer>
 
-  <!-- JS -->
-  <script src="main.js" type="module"></script>
+
+    <!-- Audio Assets -->
+    <audio id="sfx-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="sfx-delete" src="assets/sounds/delete.mp3" preload="auto"></audio>
+    <audio id="sfx-clear" src="assets/sounds/clear.mp3" preload="auto"></audio>
+    <audio id="sfx-equals" src="assets/sounds/equals.mp3" preload="auto"></audio>
+
+    <!-- JS -->
+    <script src="main.js" type="module"></script>
 </body>
+
 </html>

@@ -135,6 +135,48 @@ html, body {
 }
 
 /* =====================================
+   HISTORY ITEM BUTTONS
+===================================== */
+.history-item button.reuse,
+.history-item button.del {
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-left: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    min-height: 28px;
+    line-height: 1;
+}
+
+/* Reuse button (↩) */
+.history-item button.reuse {
+    background: var(--btn);
+    color: var(--accent);
+}
+
+.history-item button.reuse:hover {
+    background: rgba(77, 208, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Delete button (✖) */
+.history-item button.del {
+    background: var(--btn);
+    color: #ff6b6b;
+}
+
+.history-item button.del:hover {
+    background: rgba(255, 107, 107, 0.15);
+    transform: translateY(-2px);
+}
+
+/* =====================================
    CALCULATOR CARD
 ===================================== */
 .calculator {
@@ -289,6 +331,107 @@ html, body {
 }
 
 /* =====================================
+   HEADER DESIGN
+===================================== */
+header {
+  max-width: 900px;
+  margin: 0 auto 24px auto;
+  padding: 20px 16px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  color: var(--accent);
+}
+
+header p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+header p a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+header p a:hover {
+  color: #00cfff;
+  text-decoration: underline;
+}
+
+/* =====================================
+   FOOTER DESIGN
+===================================== */
+footer {
+  text-align: center;
+  padding: 18px 16px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  margin: 24px auto 12px auto;
+  max-width: 900px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+footer a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #00cfff;
+  text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVE HEADER & FOOTER
+===================================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 0.95rem;
+  }
+  footer {
+    font-size: 0.9rem;
+    padding: 14px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 16px 12px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.85rem;
+    padding: 12px 10px;
+  }
+}
+
+/* =====================================
    TABLET
 ===================================== */
 @media (max-width: 1000px) {
@@ -296,7 +439,6 @@ html, body {
     grid-template-columns: 1fr;
     padding: 16px;
   }
-
   .calculator {
     max-width: 420px;
   }
