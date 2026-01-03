@@ -23,6 +23,7 @@ const sciDefault = document.getElementById('sciDefault');
 const historySizeInput = document.getElementById('historySize');
 const historyListEl = document.getElementById('historyList');
 const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+const closeHistoryBtn = document.getElementById('closeHistoryBtn');
 const exportHistoryBtn = document.getElementById('exportHistory');
 const importHistoryBtn = document.getElementById('importHistory');
 const importFileInput = document.getElementById('importFile');
@@ -279,6 +280,7 @@ themeToggle.addEventListener('click', ()=>{
 
 openSettingsBtn.addEventListener('click', ()=>{ settingsPanel.classList.remove('hidden'); });
 closeSettingsBtn.addEventListener('click', ()=>{ settingsPanel.classList.add('hidden'); });
+closeHistoryBtn.addEventListener('click', () => { document.querySelector('.side-panel.left').classList.add('hidden'); });
 
 themeSelect.addEventListener('change', e=>{ state.settings.theme = e.target.value; saveSettings(); });
 soundToggle.addEventListener('change', e=>{ state.settings.sound = e.target.checked; saveSettings(); });

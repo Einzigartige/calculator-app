@@ -431,21 +431,49 @@ footer a:hover {
   }
 }
 
+
+/* -------------------------------------
+   Default: hide history close button (desktop)
+------------------------------------- */
+#closeHistoryBtn {
+  display: none; /* hidden on desktop */
+}
+
 /* =====================================
    TABLET
 ===================================== */
 @media (max-width: 1000px) {
+
   .container {
     grid-template-columns: 1fr;
     padding: 16px;
   }
+
   .calculator {
     max-width: 420px;
+  }
+
+  /* show close button on tablet (inline in header) */
+  #closeHistoryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 8px;
+  }
+
+  #closeHistoryBtn:hover {
+    background: rgba(255,255,255,0.03);
   }
 }
 
 /* =====================================
    MOBILE (BOTTOM SHEETS)
+   Bottom sheet behaviour + close button top-right
 ===================================== */
 @media (max-width: 600px) {
 
@@ -474,6 +502,7 @@ footer a:hover {
     font-size: 0.95rem;
   }
 
+  /* bottom-sheet panel */
   .side-panel {
     position: fixed;
     left: 0;
@@ -483,11 +512,45 @@ footer a:hover {
     border-radius: 18px 18px 0 0;
     z-index: 50;
     animation: slideUp .25s ease;
+    overflow: auto;
   }
 
   @keyframes slideUp {
     from { transform: translateY(100%); }
     to { transform: translateY(0); }
+  }
+
+  /* keep header relative so close button can be absolutely positioned */
+  .side-panel .panel-header {
+    position: relative;
+    padding-right: 56px; /* room for absolute close button */
+  }
+
+  /* mobile-style close button (top-right inside header) */
+  #closeHistoryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    background: var(--btn);
+    color: var(--muted);
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    z-index: 60;
+  }
+
+  #closeHistoryBtn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
   }
 
   .history-item {
@@ -514,6 +577,7 @@ footer a:hover {
    EXTRA SMALL PHONES
 ===================================== */
 @media (max-width: 380px) {
+
   .display {
     font-size: 1.4rem;
     height: 64px;
@@ -521,6 +585,15 @@ footer a:hover {
 
   .btn {
     height: 52px;
+    font-size: 0.95rem;
+  }
+
+  /* slightly smaller close button on very small screens */
+  #closeHistoryBtn {
+    width: 34px;
+    height: 34px;
+    top: 8px;
+    right: 8px;
     font-size: 0.95rem;
   }
 }
